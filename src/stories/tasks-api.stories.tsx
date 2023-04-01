@@ -5,13 +5,12 @@ export default {
   title: 'API TASKS'
 }
 
-
 export const GetTasks = () => {
 
   const [state, setState] = useState<any>([])
 
   useEffect(() => {
-    const todolistId = "910a0f23-d5ec-4b49-864f-3bd01ff88bf2"
+    const todolistId = "a9d75340-2611-46c7-bdf1-40b94260d5cf"
 
     todolistsAPI.getTasks(todolistId)
       .then((res) => setState(res.data))
@@ -29,7 +28,7 @@ export const CreateTask = () => {
 
   useEffect(() => {
     const title = "SOME TASK 1"
-    const todolistId = "3a07e2d5-5468-4949-a44e-8f11a6987673"
+    const todolistId = "a9d75340-2611-46c7-bdf1-40b94260d5cf"
 
     todolistsAPI.createTask(todolistId, title)
       .then((res) => setState(res.data))
